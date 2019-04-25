@@ -4,16 +4,12 @@ namespace Omnipay\AlfaBank\Message;
 
 use Omnipay\Common\Message\ResponseInterface;
 
-/**
- * Class PaynetAuthorizeRequest
- * @package shop\components\payments\messages
- */
 class AuthorizeRequest extends AbstractRequest
 {
     /**
      * @var string
      */
-    protected $service = 'registerPreAuth.do';
+    protected $service = 'register.do';//'registerPreAuth.do';
 
     /**
      * @return mixed
@@ -47,7 +43,7 @@ class AuthorizeRequest extends AbstractRequest
             'POST',
             $this->createUrlTo($this->service),
             $this->getHeaders(),
-            json_encode($data)
+            http_build_query($data)
         );
 
         return $this->response = new AuthorizeResponse(

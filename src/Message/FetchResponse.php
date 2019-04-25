@@ -2,10 +2,6 @@
 
 namespace Omnipay\AlfaBank\Message;
 
-/**
- * Class FetchResponse
- * @package Omnipay\AlfaBank\Message
- */
 class FetchResponse extends AbstractResponse
 {
     /**
@@ -14,7 +10,7 @@ class FetchResponse extends AbstractResponse
      */
     public function isSuccessful()
     {
-        return in_array($this->data->get('OrderStatus'), [1, 2]);
+        return in_array((int)$this->data->get('orderStatus'), [1, 2]);
     }
 
     /**
@@ -23,7 +19,7 @@ class FetchResponse extends AbstractResponse
      */
     public function isPending()
     {
-        return in_array($this->data->get('OrderStatus'), [0, 1, 5]);
+        return in_array((int)$this->data->get('orderStatus'), [0, 1, 5]);
     }
 
     /**
@@ -43,7 +39,7 @@ class FetchResponse extends AbstractResponse
      */
     public function isCancelled()
     {
-        return (bool)$this->getCode() || in_array($this->data->get('OrderStatus'), [3, 4, 6]);
+        return (bool)$this->getCode() || in_array($this->data->get('orderStatus'), [3, 4, 6]);
     }
 
     /**
@@ -53,7 +49,7 @@ class FetchResponse extends AbstractResponse
      */
     public function getCode()
     {
-        return $this->data->get('ErrorCode');
+        return $this->data->get('errorCode');
     }
 
     /**

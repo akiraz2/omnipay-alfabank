@@ -2,11 +2,6 @@
 
 namespace Omnipay\AlfaBank\Message;
 
-/**
- * Class AbstractRequest
- *
- * @package shop\components\payments\paynet\message
- */
 abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
 {
     /**
@@ -27,8 +22,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     public function getHeaders()
     {
         return [
-            'Accept' => 'application/json',
-            'Content-Type' => 'application/json',
+            'Content-Type' => 'application/x-www-form-urlencoded'
         ];
     }
 

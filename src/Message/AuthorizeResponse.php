@@ -2,10 +2,6 @@
 
 namespace Omnipay\AlfaBank\Message;
 
-/**
- * Class Response
- * @package shop\components\payments\paynet\message
- */
 class AuthorizeResponse extends AbstractResponse
 {
     /**
@@ -14,7 +10,7 @@ class AuthorizeResponse extends AbstractResponse
      */
     public function isSuccessful(): bool
     {
-        return (int)$this->data->get('errorCode', -1) === 0;
+        return (int)$this->data->get('errorCode', 0) === 0;
     }
 
     /**

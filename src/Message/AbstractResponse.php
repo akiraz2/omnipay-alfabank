@@ -5,10 +5,6 @@ namespace Omnipay\AlfaBank\Message;
 use Omnipay\Common\Message\RequestInterface;
 use Symfony\Component\HttpFoundation\ParameterBag;
 
-/**
- * Class AbstractResponse
- * @package Omnipay\AlfaBank\Message
- */
 abstract class AbstractResponse extends \Omnipay\Common\Message\AbstractResponse
 {
     /**

@@ -2,10 +2,6 @@
 
 namespace Omnipay\AlfaBank\Message;
 
-/**
- * Class CaptureRequest
- * @package shop\components\payments\paynet\message
- */
 class CaptureRequest extends AbstractRequest
 {
     /**

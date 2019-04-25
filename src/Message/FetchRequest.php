@@ -2,16 +2,12 @@
 
 namespace Omnipay\AlfaBank\Message;
 
-/**
- * Class RefundRequest
- * @package shop\components\payments\paynet\message
- */
 class FetchRequest extends AbstractRequest
 {
     /**
      * @var string
      */
-    protected $service = 'getOrderStatusExtended.do ';
+    protected $service = 'getOrderStatusExtended.do';
 
     /**
      * @return mixed
@@ -38,9 +34,8 @@ class FetchRequest extends AbstractRequest
             'POST',
             $this->createUrlTo($this->service),
             $this->getHeaders(),
-            json_encode($data)
+            http_build_query($data)
         );
-
         return $this->response = new FetchResponse(
             $this,
             json_decode($httpResponse->getBody()->getContents(), true)

@@ -2,10 +2,6 @@
 
 namespace Omnipay\AlfaBank\Message;
 
-/**
- * Class RefundResponse
- * @package Omnipay\AlfaBank\Message
- */
 class RefundResponse extends AbstractResponse
 {
     /**

@@ -2,10 +2,6 @@
 
 namespace Omnipay\AlfaBank\Message;
 
-/**
- * Class RefundRequest
- * @package shop\components\payments\paynet\message
- */
 class RefundRequest extends AbstractRequest
 {
     /**
