@@ -27,7 +27,9 @@ class AuthorizeRequest extends AbstractRequest
                 'orderNumber' => $this->getParameter('orderNumber'),
             ]
         );
-
+        if ($this->getParameter('orderBundle')) {
+            $data['orderBundle'] = json_encode($this->getParameter('orderBundle'));
+        }
         return $data;
     }
 
