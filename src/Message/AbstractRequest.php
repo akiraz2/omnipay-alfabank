@@ -85,8 +85,21 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return $this->setParameter('orderNumber', $value);
     }
 
+    /**
+     * @param array $value
+     * @return AbstractRequest
+     */
     public function setOrderBundle(array $value)
     {
         return $this->setParameter('orderBundle', $value);
+    }
+
+    /**
+     * @param string $value
+     * @return AbstractRequest
+     */
+    public function setOrderId(string $value)
+    {
+        return $this->setParameter('orderId', $value);
     }
 }

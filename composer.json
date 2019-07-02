@@ -1,12 +1,13 @@
 {
     "name": "padavvan/omnipay-alfabank",
-    "description": "Alfabank API",
+    "description": "Omnipay Alfabank API",
     "type": "library",
     "keywords": [
         "alfabank",
         "rest",
         "api",
-        "payment"
+        "payment",
+        "omnipay"
     ],
     "require": {
         "php": ">=7.1.0",

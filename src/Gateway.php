@@ -5,6 +5,7 @@ namespace Omnipay\AlfaBank;
 use Omnipay\AlfaBank\Message\AuthorizeRequest;
 use Omnipay\AlfaBank\Message\CaptureRequest;
 use Omnipay\AlfaBank\Message\FetchRequest;
+use Omnipay\AlfaBank\Message\ReceiptRequest;
 use Omnipay\AlfaBank\Message\RefundRequest;
 
 /**
@@ -57,6 +58,11 @@ class Gateway extends \Omnipay\Common\AbstractGateway
     public function refund(array $options = [])
     {
         return $this->createRequest(RefundRequest::class, $options);
+    }
+
+    public function receipt(array $options = [])
+    {
+        return $this->createRequest(ReceiptRequest::class, $options);
     }
 
     /**
